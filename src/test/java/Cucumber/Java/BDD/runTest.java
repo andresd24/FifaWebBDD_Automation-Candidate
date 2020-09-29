@@ -1,4 +1,4 @@
-package Cucumber.Java.Test;
+package Cucumber.Java.BDD;
 
 import org.junit.runner.RunWith; 
 import cucumber.junit.Cucumber; 

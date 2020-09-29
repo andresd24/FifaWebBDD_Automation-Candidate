@@ -19,7 +19,7 @@ public class BasePage {
 
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities	);		
-    	driver.get("https://localhost:4200/"); 
+    	driver.get("http://localhost:4200/"); 
     	setWebDriver(driver);
 	}
 	

@@ -34,7 +34,7 @@ public class LoginAndRegistrationSteps	 {
 	   List<String> textsList = welcomePage.getTextsFromTheWelcomeMenu();
 	   
 	   assertTrue("list doesn't contain 'Show Teams'", textsList.contains("Show Teams"));
-	   assertTrue("list doesn't contain 'Show Admins'", textsList.contains("Show keepers"));
+	   assertTrue("list doesn't contain 'Show Admins'", textsList.contains("Show Admins"));
 	   assertTrue("list doesn't contain 'Contact Us'", textsList.contains("Contact us"));
 	   
 	   List<String> linksList = welcomePage.getLinksFromTheWelcomeMenu();

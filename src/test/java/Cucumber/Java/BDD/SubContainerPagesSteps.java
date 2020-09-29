@@ -1,7 +1,5 @@
 package Cucumber.Java.BDD;
 
-package Cucumber.Java.BDD;
-
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.annotation.en.Given;

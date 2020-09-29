@@ -19,7 +19,7 @@ public class WelcomePage extends BasePage {
 	By.ByCssSelector byTopRigtNavbarLoginLink =	new By.ByCssSelector("ul.navbar-right > li > a[href='/login']");
 	
 	
-	By.ByCssSelector byTopRightNavBarDropdownMenuTitleLink = new By.ByCssSelector("ul.navbar-right > li.dropdown > a.dropdown-toggle");
+	By.ByCssSelector byTopRightNavBarDropdownMenuTitleLink = new By.ByCssSelector("li.dropdown > a.dropdown-toggle");
 	By.ByXPath byTopRightNavBarDropdownControlPanelLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]/li[1]/a[@href='/admin-panel']");
 	By.ByXPath byTopRightNavBarLogoutLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]//a/span[contains(@class, 'glyphicon-log-out')]/parent::a");
 	
