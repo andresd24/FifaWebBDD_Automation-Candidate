@@ -4,7 +4,7 @@
 
   <groupId>FifaWebBDD_Automation-Candidate</groupId>
   <artifactId>FifaWebBDD_Automation-Candidate</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
 
   <name>Cucumber.Java.BDD</name>

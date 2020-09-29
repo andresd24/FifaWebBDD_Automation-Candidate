@@ -24,5 +24,5 @@ Feature: Login and Registration
     And The user closes the browser session
 
     Examples: 
-      | email           | password | name  |
-      | admin@admin.com | admin    | admin |
+      | email           | password 		 | name  |
+      | admin@admin.com | Admin123!    | admin |
