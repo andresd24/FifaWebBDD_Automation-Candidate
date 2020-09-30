@@ -3,14 +3,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByXPath;
-import org.openqa.selenium.By.ByCssSelector;
-import org.openqa.selenium.By.ByPartialLinkText;
 import org.openqa.selenium.WebElement;
 
 public class WelcomePage extends BasePage {
 	
+	HelperPage helperPage;
 	
+	public WelcomePage() {
+		helperPage = new HelperPage();
+	}
+
 	By.ByCssSelector byTeamsButton = new By.ByCssSelector("p.btn-toolbar a.btn-primary");
 	By.ByCssSelector byAdminsButton = new By.ByCssSelector("p.btn-toolbar a.btn-success");
 	By.ByCssSelector byContactUsButton = new By.ByCssSelector("p.btn-toolbar a.btn-warning");
@@ -22,12 +24,6 @@ public class WelcomePage extends BasePage {
 	By.ByXPath byTopRightNavBarDropdownControlPanelLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]/li[1]/a[@href='/admin-panel']");
 	By.ByXPath byTopRightNavBarLogoutLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]//a/span[contains(@class, 'glyphicon-log-out')]/parent::a");
 	
-	HelperPage helperPage;
-	
-	public WelcomePage() {
-		helperPage = new HelperPage();
-	
-	}
 
 	public List<String> getTextsFromTheWelcomeMessage() {     
 		
@@ -70,7 +66,7 @@ public class WelcomePage extends BasePage {
 	
 	public String getUserFirstNameFromTopRightNavBarDropdownMenuTitleLink() throws InterruptedException {
 		
-		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 5);
+		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 2);
 
 		WebElement topRightNavBarDropdownMenuTitleLink = driver.findElement(byTopRightNavBarDropdownMenuTitleLink);
 		return topRightNavBarDropdownMenuTitleLink.getText();
@@ -88,7 +84,7 @@ public class WelcomePage extends BasePage {
 		WebElement topRightNavBarDropdownMenuTitleLink = driver.findElement(byTopRightNavBarDropdownMenuTitleLink);
 		topRightNavBarDropdownMenuTitleLink.click();
 		
-		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 5);
+		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 2);
 
 		WebElement topRightNavBarDropdownControlPanelNameLink = driver.findElement(byTopRightNavBarDropdownControlPanelLink);
 		return topRightNavBarDropdownControlPanelNameLink.getText();

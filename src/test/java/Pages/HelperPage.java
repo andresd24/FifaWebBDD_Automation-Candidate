@@ -16,14 +16,10 @@ public class HelperPage extends BasePage {
 	int interval = 0;
 	int timeElapsed = 0;
 	
-	public HelperPage(){
-		
-	}
+	public HelperPage(){}
 	
 	public void waitForElementDisplay(final By byElement, int timeout, final int pollingInterval) {
 		
-		System.out.println("waitForElementDisplay");
-		 
 	     Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	                .withTimeout(timeout, TimeUnit.SECONDS)
 	                .pollingEvery(pollingInterval, TimeUnit.SECONDS)

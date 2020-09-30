@@ -2,7 +2,6 @@ package Cucumber.Java.BDD;
 
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
-import cucumber.annotation.en.Given;
 
 import static org.junit.Assert.assertEquals;
 import Pages.TeamsPage;
@@ -13,9 +12,7 @@ public class SubContainerPagesSteps {
    TeamsPage teamsPage;
    StorePage storePage;
    
-   
    public SubContainerPagesSteps(){
-	   
 	   teamsPage = new TeamsPage();
 	   storePage = new StorePage();
    }
@@ -30,7 +27,6 @@ public class SubContainerPagesSteps {
    public void validateTextTeamsSubContainerSectionHeaderText() throws InterruptedException {   
 	   
 	   assertEquals("The Teams Sub Section doesn't contain the correct header text", "Teams", teamsPage.getTeamsSectionHeaderText());
-	   
    }
    	
    
@@ -38,8 +34,6 @@ public class SubContainerPagesSteps {
    public void userPressesDelayedButtonAndWaitsForTextToAppear() throws InterruptedException {   
 	   
 	   storePage.pressDelayedButtonAndWaitForTextToAppear();
-	   
    }
    	
-   
 } 

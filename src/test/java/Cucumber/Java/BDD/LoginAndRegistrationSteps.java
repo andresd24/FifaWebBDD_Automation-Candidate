@@ -82,6 +82,7 @@ public class LoginAndRegistrationSteps	 {
    
    @When("^The user navigates to the Store page from the NavBar$")
    public void clickOnStoresNavbarLink() {
+	   
 	   storePage.clickOnStoresNavBarLink();
    }
    

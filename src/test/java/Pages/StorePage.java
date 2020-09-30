@@ -5,13 +5,6 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-
 public class StorePage extends BasePage {
 	
 	
@@ -34,7 +27,7 @@ public class StorePage extends BasePage {
 		delayedButton.click();
 		
 		helperPage.waitForElementDisplay(byDelayedText, 60, 2);
-		
+
 	}
 	
 	public void clickOnStoresNavBarLink() {

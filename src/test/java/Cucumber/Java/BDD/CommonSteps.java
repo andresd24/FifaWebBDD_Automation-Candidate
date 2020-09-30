@@ -12,7 +12,6 @@ public class CommonSteps {
    BasePage basePage = new BasePage();
    
    public CommonSteps() {
-	   
 	   basePage = new BasePage();
    }
    
@@ -29,7 +28,5 @@ public class CommonSteps {
 	   basePage.closeBrowser();
 	   
    }
-	
-	
 	
 }

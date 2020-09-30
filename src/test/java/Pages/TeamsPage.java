@@ -9,9 +9,7 @@ public class TeamsPage extends BasePage {
 	By.ByXPath byTeamsNavBarLink = new By.ByXPath("//li/a[@href='/teams']");
 	By.ByXPath byTeamsPageTitle = new By.ByXPath("//teams/div/h1");
 	
-	public TeamsPage() {
-	
-	}
+	public TeamsPage() {}
 
 	public void clickOnTeamsNavBarLink() {
 		
@@ -19,7 +17,6 @@ public class TeamsPage extends BasePage {
 	    teamsNavBarLink.click();
 		
 	}
-	
 	
 	public String getTeamsSectionHeaderText() {     
 		

@@ -1,14 +1,11 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends BasePage {
 		
-	public RegisterPage() {
-
-	}
+	public RegisterPage() {}
 		
 	By.ByXPath byNameTextBox = new By.ByXPath("//input[@name='name']");
 	By.ByXPath bySurnameTextBox = new By.ByXPath("//input[@name='surname']");

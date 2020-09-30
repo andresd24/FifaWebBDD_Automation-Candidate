@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 		
-	public LoginPage() {
-
-	}
+	public LoginPage() {}
 		
 	By.ByXPath byTopRightNavBarMenuLinkWhenLoggedOut = new By.ByXPath("//ul[contains(@class, 'navbar-right')]/li/a[contains(@href, '/login')]");
 	By.ByXPath byEmailTexttBox = new By.ByXPath("//input[@name='email']");

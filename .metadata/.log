@@ -1,0 +1,13 @@
+!SESSION 2020-09-29 20:20:18.967 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/andres/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/andres/code/fifa_test_app/FifaWebBDD_Automation-Candidate -product org.eclipse.epp.package.java.product -keyring /Users/andres/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-09-29 20:20:23.678
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-09-29 20:20:23.769
+!MESSAGE Using Apache MINA sshd as ssh client.
