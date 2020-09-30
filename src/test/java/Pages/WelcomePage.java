@@ -1,5 +1,4 @@
 package Pages;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,11 +22,14 @@ public class WelcomePage extends BasePage {
 	By.ByXPath byTopRightNavBarDropdownControlPanelLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]/li[1]/a[@href='/admin-panel']");
 	By.ByXPath byTopRightNavBarLogoutLink = new By.ByXPath("//ul[contains(@class,'dropdown-menu')]//a/span[contains(@class, 'glyphicon-log-out')]/parent::a");
 	
+	HelperPage helperPage;
+	
 	public WelcomePage() {
+		helperPage = new HelperPage();
 	
 	}
 
-	public List<String> getTextsFromTheWelcomeMenu() {     
+	public List<String> getTextsFromTheWelcomeMessage() {     
 		
 		List<String> textsList = new ArrayList<String>();
 		
@@ -68,6 +70,8 @@ public class WelcomePage extends BasePage {
 	
 	public String getUserFirstNameFromTopRightNavBarDropdownMenuTitleLink() throws InterruptedException {
 		
+		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 5);
+
 		WebElement topRightNavBarDropdownMenuTitleLink = driver.findElement(byTopRightNavBarDropdownMenuTitleLink);
 		return topRightNavBarDropdownMenuTitleLink.getText();
 		
@@ -83,6 +87,8 @@ public class WelcomePage extends BasePage {
 		
 		WebElement topRightNavBarDropdownMenuTitleLink = driver.findElement(byTopRightNavBarDropdownMenuTitleLink);
 		topRightNavBarDropdownMenuTitleLink.click();
+		
+		helperPage.waitForElementDisplay(byTopRightNavBarDropdownMenuTitleLink, 60, 5);
 
 		WebElement topRightNavBarDropdownControlPanelNameLink = driver.findElement(byTopRightNavBarDropdownControlPanelLink);
 		return topRightNavBarDropdownControlPanelNameLink.getText();

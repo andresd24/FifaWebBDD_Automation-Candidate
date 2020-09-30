@@ -34,10 +34,10 @@ public class SubContainerPagesSteps {
    }
    	
    
-   @Given("^The user sends constant string 'ABC' to an input box that shows a button after a delay$")
-   public void sendRandomKeyToTextBoxThatShowsAButtonWithDelay() throws InterruptedException {   
+   @When("^The user presses delayed button and waits 20 seconds the text to appear$")
+   public void userPressesDelayedButtonAndWaitsForTextToAppear() throws InterruptedException {   
 	   
-	   storePage.sendKeyToDelayedTextBoxAndReturnWhenButtonAppears();
+	   storePage.pressDelayedButtonAndWaitForTextToAppear();
 	   
    }
    	

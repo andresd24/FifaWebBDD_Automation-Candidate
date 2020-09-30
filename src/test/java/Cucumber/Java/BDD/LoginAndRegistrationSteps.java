@@ -31,7 +31,7 @@ public class LoginAndRegistrationSteps	 {
    @Then("^Validate that the Welcome Page loads correctly$") 
    public void validateTextsandLinksFromTheWelcomeMenu() {   
 	   
-	   List<String> textsList = welcomePage.getTextsFromTheWelcomeMenu();
+	   List<String> textsList = welcomePage.getTextsFromTheWelcomeMessage();
 	   
 	   assertTrue("list doesn't contain 'Show Teams'", textsList.contains("Show Teams"));
 	   assertTrue("list doesn't contain 'Show Admins'", textsList.contains("Show Admins"));

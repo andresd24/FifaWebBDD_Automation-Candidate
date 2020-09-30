@@ -15,45 +15,26 @@ import org.openqa.selenium.support.ui.Wait;
 public class StorePage extends BasePage {
 	
 	
-	By.ByCssSelector byStoreNavBarLink = new By.ByCssSelector("ul.navbar-nav > li > a[href='/store']");
-	By.ByXPath byDelayedTextBox = new By.ByXPath("//app-root/div[2]/tienda/div[1]/div[4]/input[1]");
-	By.ByCssSelector byDelayedButton = new By.ByCssSelector("parque button");
+	By byStoreNavBarLink = new By.ByCssSelector("ul.navbar-nav > li > a[href='/store']");
+	By byDelayedButton = new By.ByCssSelector("#buttonDelay");
+	By byDelayedText = new By.ByCssSelector("#textDelay");
 	
 	int interval = 0;
 	int timeElapsed = 0;		
 	
-	public StorePage() {
+	HelperPage helperPage;
 	
+	public StorePage() {
+		helperPage = new HelperPage();
 	}
 
-	public void sendKeyToDelayedTextBoxAndReturnWhenButtonAppears() {
+	public void pressDelayedButtonAndWaitForTextToAppear() {
 		
-		WebElement delayedTextBox = driver.findElement(byDelayedTextBox);
-		delayedTextBox.sendKeys("ABC");
+		WebElement delayedButton = driver.findElement(byDelayedButton);
+		delayedButton.click();
 		
-	     Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-	                .withTimeout(60, TimeUnit.SECONDS)
-	                .pollingEvery(5, TimeUnit.SECONDS)
-	                .ignoring(org.openqa.selenium.NoSuchElementException.class);
-	        
-	     Function<WebDriver, WebElement> function = new Function<WebDriver, WebElement>() {
-               public WebElement apply(WebDriver driver) {
-                	
-    				interval++;
-    				System.out.println("Interval #" + interval + " /  Time Elapsed: " + timeElapsed + " seconds");
-    				timeElapsed = timeElapsed + 5;
-    				
-            		WebElement element = driver.findElement(byDelayedButton);
-    				if (element.isDisplayed() )
-    				{
-    					return element;
-    				}
-    				
-    				return element;
-                }
-            };
-	        
-            wait.until(function);
+		helperPage.waitForElementDisplay(byDelayedText, 60, 2);
+		
 	}
 	
 	public void clickOnStoresNavBarLink() {
