@@ -15,7 +15,7 @@ public class RegisterPage extends BasePage {
 	
 	By.ByXPath bySuccessMessageBox = new By.ByXPath("//div[contains(@class, 'alert-success')]");
 	
-	By.ByXPath byRegisterButton = new By.ByXPath("//input[@value='Sign up']");
+	By.ByXPath byRegisterButton = new By.ByXPath("//input[@value='Register']");
 	
 	By.ByCssSelector byRegistrationReturnMessage = new By.ByCssSelector("register div div");
 	

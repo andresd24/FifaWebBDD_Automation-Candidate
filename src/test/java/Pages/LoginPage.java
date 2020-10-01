@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
 	By.ByXPath byEmailTexttBox = new By.ByXPath("//input[@name='email']");
 	By.ByXPath byPasswordTextBox = new By.ByXPath("//input[@name='password']");
 	By.ByXPath successMessageBox = new By.ByXPath("//div[contains(@class, 'alert-success')]");
-	By.ByXPath loginButtonBy = new By.ByXPath("//input[@value='Sign In']");
+	By.ByXPath loginButtonBy = new By.ByXPath("//input[@value='Log In']");
 	
 	public void clickOnTheTopRightMenuLoginButton() {
 		

@@ -25,4 +25,4 @@ Feature: Login and Registration
 
     Examples: 
       | email           | password 		 | name  |
-      | admin@admin.com | Admin123!    | admin |
+      | admin@admin.com | Admin123!    | Admin |
